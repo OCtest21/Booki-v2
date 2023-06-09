@@ -123,3 +123,4 @@ La maquette doit être compatible avec les dernières versions de Google Chrome 
 ### Restrictions:
 
 Aucun framework CSS (type BootStrap ou Tailwind CSS) ou préprocesseur CSS (type Sass ou Less) ne doit être utilisé. Aucun autre langage ne doit être utilisé (comme JavaScript, par exemple). <br/>
+# Booki-v2
