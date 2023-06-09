@@ -1,0 +1,741 @@
+/*----------  Reset CSS  ----------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+} /* reset css */
+
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/*----------  Custom Properties  ----------*/
+
+:root {
+  --main-blue: #0065fc;
+  --light-blue: #deebff;
+  --grey: #d9d9d9;
+  --black: rgba(0, 0, 0, 1);
+}
+
+/*=============================================
+=                     HEADER                  =
+=============================================*/
+header {
+  margin: 0px 55px 37px 55px;
+}
+/*----------  Navbar  ----------*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo img {
+  width: 61.09px;
+  height: 19px;
+}
+
+nav ul {
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+  height: 100px;
+}
+
+nav li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  text-align: center;
+}
+
+nav li a {
+  text-decoration: none;
+  font: 400 16px "Raleway", sans-serif; 
+  color: var(--black);
+}
+
+nav li a:hover {
+  cursor: pointer;
+  color: var(--main-blue);
+}
+
+
+nav li a:hover::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav li a:hover::before {
+  background-color: var(--main-blue);
+  width: 100%;
+}
+
+
+
+/*----------  Searchbar  ----------*/
+
+.search-bar__titles h1 {
+  font:  700 22px "Raleway", sans-serif;
+  margin: 53px 0 8px 0px;
+}
+
+.search-bar__titles p {
+  font:  400 16px "Raleway", sans-serif;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 32px;
+}
+
+.input-search {
+  display: flex;
+  border: 1px solid var(--font-color);
+  display: flex;
+  width: 418px;
+}
+
+#search-bar--icon {
+  fill: var(--black);
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.input-search input {
+  font:  700 18px "Raleway", sans-serif;
+  border: none;
+  outline: none;
+  width: 60%;
+  border: none;
+  padding-left: 17px;
+}
+
+.input-search input::placeholder {
+  align-self: center;
+}
+
+.search-bar--button {
+  font:  700 18px "Raleway", sans-serif;
+  color: white;
+  background: var(--main-blue);
+  padding: 14px 16px 14px 16px;
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.search-bar--button:hover {
+  cursor: pointer;
+}
+
+.search-bar--button:active{
+  transform: translateY(1px);
+}
+
+.search-bar--button i {
+  display: none;
+}
+
+/*----------  Filter bar  ----------*/
+
+.filter-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 32px;
+}
+.filter-bar h2 {
+  font:  700 18px "Raleway", sans-serif;
+}
+
+.filter-bar__btns {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.filter-bar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font:  700 17px "Raleway", sans-serif;
+  border: 2px solid var(--grey);
+  border-radius: 25px;
+  height: 45px;
+  padding: 4px 20px;
+}
+
+.filter-bar__btn:active{
+  transform: translateY(2px);
+}
+
+.filter-bar i {
+  color: var(--main-blue);
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.filter-bar__btn:hover {
+  background-color: var(--light-blue);
+  cursor: pointer;
+}
+
+/*----------  Info bar  ----------*/
+
+.info-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.info-bar p {
+  font:  400 16px "Raleway", sans-serif;
+}
+
+.info-bar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 1000px;
+  border: 1px solid var(--grey);
+  margin-right: 11px;
+}
+
+#info-bar__icon {
+  font-size: 11.75px;
+  color: var(--main-blue);
+  text-align: center;
+}
+
+/*=====  End of HEADER  ======*/
+
+/*=============================================
+=              MAIN SECTION                  =
+=============================================*/
+
+.offers {
+  margin: 0 50px 60px 50px;
+  display: flex;
+}
+
+.offers h2 {
+  font:  700 22px "Raleway", sans-serif;
+}
+
+/*----------  Hébergements à Marseille  ----------*/
+
+.offers__main {
+  width: calc(
+    (2 * (100% - 40px)) / 3
+  ); /* Deux tiers de l'espace total moins 40px d'espacement */
+  padding: 34px 44px 46px 36px;
+}
+
+.offers__main h2 {
+  margin-bottom: 23px;
+}
+
+.card__main {
+  width: calc(100% / 3);
+  border: 5px solid #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Ajouter une transition pour un effet plus doux */
+}
+
+.card__main a {
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__main img {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  height: 124px;
+  object-fit: cover;
+}
+.card__main h3 {
+  font:  700 16px "Raleway", sans-serif;
+}
+.card__main p {
+  font:  400 14px "Raleway", sans-serif;
+}
+
+.stars__container--main i {
+  color: var(--main-blue);
+  margin: -2px;
+  font-size: 14px;
+}
+
+.card__description--main {
+  padding: 4px 0 6px 11px;
+}
+
+.card__description--main > h3,
+.card__description--main > p {
+  margin-bottom: 9px;
+}
+
+.card__main:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card__main:active {
+  transform: translateY(2px); /* Déplacer la carte de 2 pixels vers le bas */
+}
+
+.show-more__btn {
+  font:  700 18px "Raleway", sans-serif;;
+  margin-top: 40px;
+  margin-left: 4px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.show-more__btn:hover {
+  color: var(--main-blue);
+  background-color: white;
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.first-row {
+  margin-bottom: 30px;
+}
+
+.card__main:nth-child(n + 1):nth-child(-n + 2) {
+  margin-right: 31px;
+}
+/*----------  Les plus populaires  ----------*/
+
+.offers__spensored {
+  width: calc(
+    (100% - 40px) / 3
+  ); /* Un tiers de l'espace total moins 40px d'espacement */
+  margin-left: 40px;
+  padding: 41px 40px 1px 37px;
+}
+
+.card__spensored--container{
+  display: flex;
+  flex-direction: column;
+}
+.offers__spensored h2 {
+  margin-bottom: 26px;
+}
+
+.offers__spensored-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.offers__spensored-title i {
+  color: var(--main-blue);
+  font-size: 18px;
+}
+
+.card__spensored {
+  border-radius: 20px;
+  border: 5px solid #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card__spensored:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card__spensored:active {
+  transform: translateY(2px); /* Déplacer la carte de 2 pixels vers le bas */
+}
+
+.card__spensored a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.card__spensored img {
+  height: 144px;
+  width: 36%;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+}
+
+.card__description--spensored {
+  padding: 16px 22px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--black);
+}
+
+.card__spensored:nth-child(n + 1) {
+  margin-bottom: 33px;
+}
+
+.card__description--spensored h3 {
+  font:  700 16px "Raleway", sans-serif;
+  margin-bottom: 7px;
+}
+
+.card__description--spensored p {
+  font:  400 14px "Raleway", sans-serif;
+}
+
+.stars__container--spensored i {
+  color: var(--main-blue);
+  margin: -2px;
+  font-size: 14px;
+}
+/*=====  End of Offers section  ======*/
+
+/*=============================================
+=            ACTIVITIES SECTION             =
+=============================================*/
+
+.activities {
+  margin: 60px 53px 61px 50px;
+}
+
+.activities h2 {
+  font:  700 22px "Raleway", sans-serif;
+  margin-bottom: 18.47px;
+}
+
+.card__activity {
+  width: 25%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card__activity:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px); /* Déplacer la carte de 2 pixels vers le bas */
+}
+
+.card__activity a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.activities img {
+  width: 100%;
+  height: 389px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card__description--activity h3 {
+  font:  700 16px "Raleway", sans-serif;
+  padding: 20px 36px 21px 19px;
+}
+
+.activities-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card__activity:nth-child(-n + 3) {
+  margin-right: 43px;
+}
+/*=====  End of Activities section  ======*/
+
+/*=============================================
+=            FOOTER SECTION                 =
+=============================================*/
+
+footer {
+  display: flex;
+  padding: 45px 0px 24px 118px;
+  margin-bottom: 27px;
+}
+
+footer h3 {
+  font:  700 18px "Raleway", sans-serif;
+  margin-bottom: 20px;
+}
+
+.footer__column:nth-child(-n + 2) {
+  width: 30%;
+}
+
+.link-list li:nth-child(-n + 2) {
+  margin-bottom: 12px;
+}
+
+.link-list a {
+  text-decoration: none;
+  color: var(--black);
+  font:  400 16px "Raleway", sans-serif;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+/*=====  End of Footer section  ======*/
+
+/*=============================================
+=            MEDIA QUERIES SECTION            =
+=============================================*/
+
+/*----------  Tablettes  ----------*/
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /*----------  Header  ----------*/
+
+  header {
+    margin: 0px 30px 37px 30px;
+  }
+
+  .input-search input {
+    font-size: 16px;
+  }
+
+  .filter-bar__btns {
+    gap: 10px;
+  }
+
+  .filter-bar__btn {
+    padding: 4px 16px;
+    font-size: 15px;
+  }
+
+  .filter-bar {
+    gap: 10px;
+  }
+
+  /*----------  Hébergements  ----------*/
+
+  .offers {
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+
+  .offers__main,
+  .offers__spensored {
+    width: 100%;
+    margin: 0;
+    padding: 42px 40px;
+  }
+
+  .card__spensored--container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card__spensored img {
+    width: 50%;
+  }
+  
+
+.card__description--spensored {
+  padding: 16px 22px 0px 15px;
+
+}
+
+  .card__spensored:nth-child(-n + 2) {
+    margin-right: 23px;
+  }
+
+  .card__spensored:nth-child(-n + 3) {
+    flex: 1;
+  }
+
+  .card__description--spensored h3 {
+    font-size: 14px;
+  }
+
+  .card__description--spensored p {
+    font-size: 13px;
+  }
+
+  /*----------  Activités  ----------*/
+
+  .card__activity:nth-child(-n + 3) {
+    margin-right: 38px;
+  }
+  .activities img {
+    height: 211px;
+  }
+  .activities h2 {
+    margin-bottom: 34px;
+  }
+}
+
+/*----------  Téléphone mobile  ----------*/
+
+@media (max-width: 768px) {
+  /*----------  Header  ----------*/
+
+  header {
+    margin: 0px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__logo {
+    margin-top: 21px;
+    margin-bottom: 38px;
+  }
+
+  nav ul {
+    width: 100%;
+    height: 50px;
+  }
+
+  nav ul li {
+    width: 50%;
+  }
+
+  nav li a:hover::before {
+    top: 100%;
+  }
+
+  .search-bar__container {
+    margin: 0px 20px;
+  }
+
+  .search-bar--button i {
+    display: block;
+  }
+
+  .search-bar--button span {
+    display: none;
+  }
+
+  .input-search {
+    width: 100%;
+  }
+
+  .input-search input {
+    font-size: 16px;
+    width: 100%;
+  }
+  /*----------  Filter bar  ----------*/
+
+  .filter-bar {
+    margin-top: 34px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-bar__btns{
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 3%;
+    padding: 0;
+  }
+
+  .filter-bar__btn{
+    flex: 1 1 47%;
+    font-size: 14px;
+    justify-content: flex-start;
+    padding: 4px 16px;
+  }
+
+  
+  /*----------  Hébergements  ----------*/
+  
+  .offers {
+    flex-direction: column-reverse;
+    margin: 0 20px;
+  }
+
+  .offers__spensored{
+    width: 100%;
+    margin: 80px 0;
+    padding: 0;
+  }
+
+  .offers__main{
+    width: 100%;
+    padding: 0;
+  }
+
+  .first-row , .second-row{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card__main{
+    width: 100%;
+  }
+
+  
+  /*----------  Activités à marseille  ----------*/
+  
+  .activities{
+    margin: 80px 20px 0 20px;
+  }
+  .activities-row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .card__activity{
+    width: 100%;
+    height:190px ;
+  }
+
+  .activities img{
+    height: 124px;
+  }
+
+  
+  /*----------  Footer  ----------*/
+  
+  footer{
+    flex-direction: column;
+    padding: 0;
+    margin: 80px 20px;
+    gap: 30px;
+  }
+
+  .footer__column:nth-child(-n + 2){
+    width: 100%;
+  }
+
+  
+
+  
+}
+
+/*=====  End of Media queries section  ======*/
